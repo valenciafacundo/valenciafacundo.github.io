@@ -24,7 +24,7 @@ h6,
 .nwbColumn .timeStamp,
 .ftNav li.active a,
 .ftNav a:hover {
-	color: #20ce65;
+  color: #ffc514;
 }
 
 .btnTheme,
@@ -40,12 +40,12 @@ h6,
 .dotsList button:hover,
 .nwbcCaption:before,
 .edot {
-	background-color: #20ce65;
+  background-color: #ffc514;
 }
 
 .btnTheme:hover,
 .form-control:focus,
 .btnTheme,
 .btnThemeOutline {
-	border-color: #20ce65;
+  border-color: #ffc514;
 }
