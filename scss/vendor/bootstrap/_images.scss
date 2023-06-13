@@ -8,7 +8,12 @@
 .img-fluid {
   @include img-fluid();
 }
-
+.img-small {
+  @include img-small();
+}
+.img-tall {
+  @include img-tall();
+}
 
 // Image thumbnails
 .img-thumbnail {
@@ -20,6 +25,8 @@
 
   // Keep them at most 100% wide
   @include img-fluid();
+  @include img-small();
+  @include img-tall();
 }
 
 //
