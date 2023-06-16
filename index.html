@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/colors.css">
 	<!-- include the site responsive stylesheet -->
 	<link rel="stylesheet" href="css/responsive.css">
+	<script src="./js/translate.js"></script>
 </head>
 <body>
 	<!-- pageWrapper -->
@@ -29,11 +30,16 @@
 						<div class="row">
 							<div class="col-6 col-md-3">
 								<!-- logo -->
-								<!-- <div class="logo">
-									<a href="#">
-										<img src="images/react-logo.png" class="img-fluid" alt="scavvios" style="height: 50px;">
+								
+								<div class="logo">
+									
+									<a  onclick="cambiarIdioma('es')">
+										<img src="images/spain.svg" class="img-fluid" width="25" height="25" alt="icon">
 									</a>
-								</div> -->
+									<a  onclick="cambiarIdioma('en')">
+										<img src="images/english.svg" class="img-fluid" width="25" height="25" alt="icon">
+									</a>
+								</div>
 							</div>
 							<div class="col-6 col-md-9 position-static">
 								<!-- pageNav -->
@@ -41,23 +47,23 @@
 									<!-- pgNavOpener -->
 									<button class="navbar-toggler pgNavOpener position-relative p-0 border-0 rounded-0 mt-2" type="button" data-toggle="collapse" data-target="#pageMainNavCollapse" aria-controls="pageMainNavCollapse" aria-expanded="false" aria-label="Toggle navigation">
 										<!-- icnBar -->
-										<span class="icnBar position-absolute"><span class="sr-only">menu</span></span>
+										<span class="icnBar position-absolute"><span class="sr-only" >menu</span></span>
 									</button>
 									<!-- pageMainNavCollapse -->
 									<div class="collapse navbar-collapse justify-content-md-end pageMainNavCollapse" id="pageMainNavCollapse">
 										<!-- pgMainNavigation -->
 										<ul class="navbar-nav text-uppercase pgMainNavigation font-weight-normal">
 											<li class="nav-item">
-												<a class="nav-link smooth" href="#pageWrapper">Home</a>
+												<a class="nav-link smooth" href="#pageWrapper" id="homeText">Home</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link smooth" href="#about">About</a>
+												<a class="nav-link smooth" href="#about" id="aboutText">About</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link smooth" href="#services">Services</a>
+												<a class="nav-link smooth" href="#services" id="servicesText">Services</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link smooth" href="#works">Works</a>
+												<a class="nav-link smooth" href="#works" id="worksText">Works</a>
 											</li>
 											<!-- <li class="nav-item">
 												<a class="nav-link smooth" href="#journey">Journey</a>
@@ -66,7 +72,7 @@
 												<a class="nav-link smooth" href="#blog">Blog</a>
 											</li> -->
 											<li class="nav-item">
-												<a class="nav-link smooth" href="#contact">Contact</a>
+												<a class="nav-link smooth" href="#contact" id="contactText">Contact</a>
 											</li>
 										</ul>
 									</div>
@@ -91,10 +97,10 @@
 									<div class="position-relative ibCaptionHolder">
 										<h1 class="text-capitalize mb-3 mb-md-5">
 											<!-- headingTitle -->
-											<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-3 mb-md-5 wow fadeInLeft" data-wow-delay="1s">React Developer</strong>
+											<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-3 mb-md-5 wow fadeInLeft" data-wow-delay="1s" id="developerText">React Developer</strong>
 											<span class="d-block wow fadeInLeft" data-wow-delay="1.5s">Valencia<span class="text-white"> Facundo</span></span>
 										</h1>
-										<p class="wow fadeInLeft" data-wow-delay="1.8s">Highly experienced in web and mobile development technologies, well-versed in the latest trends and tools in the industry</p>
+										<p class="wow fadeInLeft" data-wow-delay="1.8s" id="homeDetailText">Solid experience in web and mobile development technologies, and a broad mastery of the latest industry trends and tools.</p>
 										<!-- ibBtnsWrap -->
 										<!-- mx-n1 mx-lg-n3 -->
 										<!-- <div class="ibBtnsWrap d-flex flex-wrap  pt-2 pt-lg-3  mb-3">
@@ -154,14 +160,14 @@
 									<header class="mb-lg-5">
 										<h2 class="text-capitalize mb-4 mb-lg-7">
 											<!-- headingTitle -->
-											<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-3 wow fadeInRight">About Me</strong>
-											<span class="d-block wow fadeInRight" data-wow-delay="0.7s">Inspire Your Creative Solutions</span>
+											<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-3 wow fadeInRight" id="about2Text">About Me</strong>
+											<span class="d-block wow fadeInRight" data-wow-delay="0.7s" id="aboutTitleText">Inspire Your Creative Solutions</span>
 										</h2>
-										<h3 class="text-white fwMedium wow fadeInRight" data-wow-delay="0.9s">A React & React Native Developer based in Argentina, with +2 Years of Experience.</h3>
+										<h3 class="text-white fwMedium wow fadeInRight" data-wow-delay="0.9s" id="aboutSubTitleText">A React & React Native Developer based in Argentina, with +2 Years of Experience.</h3>
 									</header>
-									<p class="wow fadeInRight" data-wow-delay="0.7s">I develop solid and efficient code, collaborate in agile teams to drive project success, and consistently strive to exceed expectations. My commitment to quality and innovation sets me apart in my field.</p>
+									<p class="wow fadeInRight" data-wow-delay="0.7s" id="aboutDetailText">I develop solid and efficient code, collaborate in agile teams to drive project success, and consistently strive to exceed expectations. My commitment to quality and innovation sets me apart in my field.</p>
 									<!-- btn -->
-									<a href=="javascript:void(0);" class="btn btnThemeOutline position-relative btnMinSmall mt-3 mt-lg-5 wow bounceIn" data-hover="Download CV" data-wow-delay="2.3s"><span class="d-block btnText">Download CV</span></a>
+									<a href=="javascript:void(0);" class="btn btnThemeOutline position-relative btnMinSmall mt-3 mt-lg-5 wow bounceIn" data-hover="Download CV" data-wow-delay="2.3s"><span class="d-block btnText" id="curriculumText">Download CV</span></a>
 								</div>
 								<div class="col-12 col-md-6 order-md-1">
 									<!-- abFeaturesWrap -->
@@ -174,7 +180,7 @@
 													<!-- abflcTag -->
 													<strong class="abflcTag position-absolute fwMedium text-white rounded-circle d-flex align-items-center justify-content-center wow bounceIn" data-wow-delay="1s"style="background-color:darkslategray">✏</strong>
 													<!-- abflcHeading -->
-													<h4 class="abflcHeading text-white fwMedium">Clean Code</h4>
+													<h4 class="abflcHeading text-white fwMedium" id="cleanCodeText">Clean Code</h4>
 												</div>
 											</li>
 											<li>
@@ -183,7 +189,7 @@
 													<!-- abflcTag -->
 													<strong class="abflcTag position-absolute fwMedium text-white rounded-circle d-flex align-items-center justify-content-center wow bounceIn" data-wow-delay="1.3s" style="background-color:darkslategray">⚙️</strong>
 													<!-- abflcHeading -->
-													<h4 class="abflcHeading text-white fwMedium ">Performance Optimization</h4>
+													<h4 class="abflcHeading text-white fwMedium " id="performanceText">Performance Optimization</h4>
 												</div>
 											</li>
 											<li>
@@ -192,7 +198,7 @@
 													<!-- abflcTag -->
 													<strong class="abflcTag position-absolute fwMedium text-white rounded-circle d-flex align-items-center justify-content-center wow bounceIn " data-wow-delay="1.7s" style="background-color:darkslategray">👥</strong>
 													<!-- abflcHeading -->
-													<h4 class="abflcHeading text-white fwMedium">Team Collaboration</h4>
+													<h4 class="abflcHeading text-white fwMedium" id="colaborationTeamText">Team Collaboration</h4>
 												</div>
 											</li>
 											<li>
@@ -201,7 +207,7 @@
 													<!-- abflcTag -->
 													<strong class="abflcTag position-absolute fwMedium text-white rounded-circle d-flex align-items-center justify-content-center wow bounceIn " data-wow-delay="2s" style="background-color:darkslategray">🎯</strong>
 													<!-- abflcHeading -->
-													<h4 class="abflcHeading text-white fwMedium">Agile Methodologies</h4>
+													<h4 class="abflcHeading text-white fwMedium" id="agileText">Agile Methodologies</h4>
 												</div>
 											</li>
 										</ul>
@@ -224,8 +230,8 @@
 							<header class="text-center mb-14 mb-lg-20">
 								<h2 class="text-capitalize mb-4 mb-lg-7">
 									<!-- headingTitle -->
-									<strong class="fwMedium d-inline-block align-top text-white position-relative headingTitle text-capitalize mb-3 wow fadeInRight">My Services</strong>
-									<span class="d-block wow fadeInUp" data-wow-delay="0.5s">What Can I Do Best ?</span>
+									<strong class="fwMedium d-inline-block align-top text-white position-relative headingTitle text-capitalize mb-3 wow fadeInRight" id="myServicesText">My Services</strong>
+									<span class="d-block wow fadeInUp" data-wow-delay="0.5s" id="doBestText">What Can I Do Best ?</span>
 								</h2>
 							</header>
 							<div class="row justify-content-center">
@@ -240,7 +246,7 @@
 										</span>
 										<!-- hasLineBottom -->
 										<h3 class="h5 hasLineBottom fwMedium text-capitalize text-white position-relative pb-4 mb-5">React Native Expo</h3>
-										<p style="color: #a4a8ab;">I handle this framework for efficient cross-platform mobile development, creating native applications using JavaScript and React.</p>
+										<p style="color: #a4a8ab;" id="serviceExpoText">I handle this framework for efficient cross-platform mobile development, creating native applications using JavaScript and React.</p>
 									</article>
 								</div>
 								<div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex">
@@ -254,7 +260,7 @@
 										</span>
 										<!-- hasLineBottom -->
 										<h3 class="h5 hasLineBottom fwMedium text-capitalize text-white position-relative pb-4 mb-5">React Native CLI</h3>
-										<p style="color: #a4a8ab;">The prowess of React Native CLI enables me to create remarkable cross-platform mobile applications with native capabilities.</p>
+										<p style="color: #a4a8ab;" id="serviceCliText">The prowess of React Native CLI enables me to create remarkable cross-platform mobile applications with native capabilities.</p>
 									</article>
 								</div>
 								<div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex">
@@ -267,8 +273,8 @@
 											</span>
 										</span>
 										<!-- hasLineBottom -->
-										<h3 class="h5 hasLineBottom fwMedium text-capitalize text-white position-relative pb-4 mb-5">IOS & Android</h3>
-										<p style="color: #a4a8ab;">I deploy apps on the App Store and Play Store, optimizing performance and providing regular updates.</p>
+										<h3 class="h5 hasLineBottom fwMedium text-capitalize text-white position-relative pb-4 mb-5" >IOS & Android</h3>
+										<p style="color: #a4a8ab;" id="platformText">I deploy apps on the App Store and Play Store, optimizing performance and providing regular updates.</p>
 									</article>
 								</div>
 								<div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex">
@@ -281,8 +287,8 @@
 											</span>
 										</span>
 										<!-- hasLineBottom -->
-										<h3 class="h5 hasLineBottom fwMedium text-capitalize text-white position-relative pb-4 mb-5">Website App</h3>
-										<p style="color: #a4a8ab;">Skilled in web development, creating high-performance websites, optimizing user experience and loading speed.</p>
+										<h3 class="h5 hasLineBottom fwMedium text-capitalize text-white position-relative pb-4 mb-5" id="websiteAppText">Website App</h3>
+										<p style="color: #a4a8ab;" id="websiteDetailText">Skilled in web development, creating high-performance websites, optimizing user experience and loading speed.</p>
 									</article>
 								</div>
 							</div>
@@ -297,12 +303,12 @@
 								<header class="mb-5">
 									<h2 class="text-capitalize mb-6">
 										<!-- headingTitle -->
-										<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-4 wow fadeInLeft">Expertise</strong>
-										<span class="d-block wow fadeInLeft" data-wow-delay="0.5s">My Skills &amp; Tools</span>
+										<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-4 wow fadeInLeft" id="expertiseText">Expertise</strong>
+										<span class="d-block wow fadeInLeft" data-wow-delay="0.5s" id="mySkillText">My Skills &amp; Tools</span>
 									</h2>
-									<h3 class="text-white fwMedium wow fadeInLeft" data-wow-delay="0.9s">Every Day is a New Challenge</h3>
+									<h3 class="text-white fwMedium wow fadeInLeft" data-wow-delay="0.9s" id="mySkillSubtitleText">Every Day is a New Challenge</h3>
 								</header>
-								<p class="wow fadeInLeft" data-wow-delay="1.3s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  unknown printer took a galley</p>
+								<p class="wow fadeInLeft" data-wow-delay="1.3s" id="mySkillDetailText">Every day presents a new opportunity to learn and grow. By harnessing my skills and leveraging the right tools, I am able to navigate the ever-changing landscape of my profession and deliver impactful solutions that make a difference.</p>
 								<!-- btn -->
 								<!-- <a href=="javascript:void(0);" class="btn btnThemeOutline position-relative btnMinSmall mt-5 wow bounceIn" data-wow-delay="1.7s" data-hover="Hire Me"><span class="d-block btnText">Hire Me</span></a> -->
 							</div>
@@ -401,15 +407,15 @@
 									<div class="col-12 col-lg-5">
 										<h2 class="text-capitalize">
 											<!-- headingTitle -->
-											<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-3 wow fadeInRight">Portfolio</strong>
-											<span class="d-block wow fadeInUp" data-wow-delay="0.5s">My Creative Work</span>
+											<strong class="fwMedium d-block text-white position-relative headingTitle text-capitalize mb-3 wow fadeInRight" id="portfolioText">Portfolio</strong>
+											<span class="d-block wow fadeInUp" data-wow-delay="0.5s" id="myWorkText">My Creative Work</span>
 										</h2>
 									</div>
 									<div class="col-12 col-lg-7">
 										<!-- filtersList -->
 										<ul class="list-unstyled filtersList isoFiltersList d-flex flex-wrap justify-content-lg-end text-uppercase fwMedium text-white wow bounceInUp" data-wow-delay="1s">
 											<li class="active"> 
-												<a href=="javascript:void(0);">ALL</a>
+												<a href=="javascript:void(0);" id="allText">ALL</a>
 											</li>
 											<!-- <li>
 												<a href=="javascript:void(0);" data-filter=".wbdesign">WEB DESIGN</a>
@@ -441,7 +447,7 @@
 											<div class="mcwcCaption text-white position-absolute d-flex align-items-center">
 												<div class="mcwccWrap w-100 p-3">
 													<h3 class="text-white text-capitalize fwMedium title">GIRe Mobile</h3>
-													<h4 class="text-white text-capitalize fwMedium subTitle">Utility application to record the weighing of each environmental recycler's bags.</h4>
+													<h4 class="text-white text-capitalize fwMedium subTitle" id="gireDetailText">Utility application to record the weighing of each environmental recycler's bags.</h4>
 												</div>
 											</div>
 										</article>
@@ -456,7 +462,7 @@
 											<div class="mcwcCaption text-white position-absolute d-flex align-items-center">
 												<div class="mcwccWrap w-100 p-3">
 													<h3 class="text-white text-capitalize fwMedium title">Shopping APP</h3>
-													<h4 class="text-white text-capitalize fwMedium subTitle mb-0">Eco-friendly shopping app for making a positive environmental impact.</h4>
+													<h4 class="text-white text-capitalize fwMedium subTitle mb-0" id="shoppingDetailText">The sales app offers a wide selection of products, user ratings, and great deals.</h4>
 												</div>
 											</div>
 										</article>
@@ -471,7 +477,7 @@
 											<div class="mcwcCaption text-white position-absolute d-flex align-items-center">
 												<div class="mcwccWrap w-100 p-3">
 													<h3 class="text-white text-capitalize fwMedium title">FLOBI</h3>
-													<h4 class="text-white text-capitalize fwMedium subTitle ">Flobi is a tennis and paddle social network to find players of a similar level to yours.</h4>
+													<h4 class="text-white text-capitalize fwMedium subTitle " id="flobiDetailText">Flobi is a tennis and paddle social network to find players of a similar level to yours.</h4>
 												</div>
 											</div>
 										</article>
@@ -486,7 +492,7 @@
 											<div class="mcwcCaption text-white position-absolute d-flex align-items-center">
 												<div class="mcwccWrap w-100 p-3">
 													<h3 class="text-white text-capitalize fwMedium title">BTES</h3>
-													<h4 class="text-white text-capitalize fwMedium subTitle">Exercise app dedicated to health and wellness, available for all devices.</h4>
+													<h4 class="text-white text-capitalize fwMedium subTitle" id="btesDetailText">Exercise app dedicated to health and wellness, available for all devices.</h4>
 												</div>
 											</div>
 										</article>
@@ -501,7 +507,7 @@
 											<div class="mcwcCaption text-white position-absolute d-flex align-items-center">
 												<div class="mcwccWrap w-100 p-3">
 													<h3 class="text-white text-capitalize fwMedium title">Food App</h3>
-													<h4 class="text-white text-capitalize fwMedium subTitle">Convenience App for Seamless Food Ordering and Delivery at Your Fingertips.</h4>
+													<h4 class="text-white text-capitalize fwMedium subTitle" id="foodDetailText">Convenience App for Seamless Food Ordering and Delivery at Your Fingertips.</h4>
 												</div>
 											</div>
 										</article>
@@ -555,15 +561,15 @@
 				<section id="contact" class="platformBlock bg-dark text-white pt-7 pb-4 pt-md-10 pb-md-7 pt-lg-16 pb-lg-12 pt-xl-23 pb-xl-18">
 					<div class="container">
 						<header class="text-center textSizeMedium mb-10 mb-md-16">
-							<h2 class="text-white mb-5 wow fadeInUp">Looking to Design Similar Project ?</h2>
-							<p class="wow fadeInUp" data-wow-delay="0.7s"><strong class="fwMedium">Contact me on any platform and i will happy to help you out ?</strong></p>
+							<h2 class="text-white mb-5 wow fadeInUp" id="similarProjectText">Looking to Design Similar Project ?</h2>
+							<p class="wow fadeInUp" data-wow-delay="0.7s"><strong class="fwMedium" id="contactMeText">Contact me on any platform and i will happy to help you out ?</strong></p>
 						</header>
 						<div class="row justify-content-center">
 							<div class="col-12 col-sm-6 col-md-4 colXlDiv5">
 								<!-- pfbColumn -->
 								<aside class="pfbColumn position-relative w-100 text-white rounded-lg pt-10 px-4 pb-4 mb-6 wow fadeInUp" data-wow-delay="1s">
 									<i class="icomoon-telephone position-absolute bg-warning rounded-circle d-flex align-items-center justify-content-center text-white icn wow bounceIn" data-wow-delay="1.5s"><span class="sr-only">icon</span></i>
-									<strong class="title d-block font-weight-normal mb-1">Call Me At:</strong>
+									<strong class="title d-block font-weight-normal mb-1" id="callMeText">Call Me At:</strong>
 									<strong class="d-block fwMedium">
 										<a href="tel:5493875035411">+549 3875035411</a>
 									</strong>
@@ -628,16 +634,16 @@
 					<nav class="ftNav">
 						<ul class="list-unstyled d-flex justify-content-center justify-content-md-start flex-wrap font-weight-normal text-uppercase mb-0">
 							<li>
-								<a href="#pageWrapper" class="smooth">Home</a>
+								<a href="#pageWrapper" class="smooth" id="homeFootText">Home</a>
 							</li>
 							<li>
-								<a href="#about" class="smooth">About</a>
+								<a href="#about" class="smooth" id="aboutFootText">About</a>
 							</li>
 							<li>
-								<a href="#services" class="smooth">Services</a>
+								<a href="#services" class="smooth" id="servicesFootText">Services</a>
 							</li>
 							<li>
-								<a href="#works" class="smooth">Works</a>
+								<a href="#works" class="smooth" id="worksFootText" >Works</a>
 							</li>
 							<!-- <li>
 								<a href="#journey" class="smooth">Journey</a>
@@ -646,14 +652,14 @@
 								<a href="#blog" class="smooth">Blog</a>
 							</li> -->
 							<li>
-								<a href="#contact" class="smooth">Contact</a>
+								<a href="#contact" class="smooth" id="contactFootText">Contact</a>
 							</li>
 						</ul>
 					</nav>
 					<!-- textCopyright -->
-					<div class="textCopyright pt-4 d-md-none">
+					<!-- <div class="textCopyright pt-4 d-md-none">
 						<p><strong class="fwMedium">&copy; <a href=="javascript:void(0);">SmithJohnson</a> 2020 | All Rights Reserved</strong></p>
-					</div>
+					</div> -->
 				</div>
 				<!-- btnTop -->
 				<a href="#pageWrapper" class="btnTop smooth fas fa-arrow-up d-none d-md-flex align-items-center justify-content-center bg-warning text-white position-absolute"><span class="sr-only">back to top</span></a>
