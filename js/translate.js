@@ -36,8 +36,8 @@ var textos = {
     en: "Solid experience in web and mobile development technologies, and a broad mastery of the latest industry trends and tools.",
   },
   aboutSubTitle: {
-    es: "Soy un desarrollador de React y React Native con residencia en Argentina, con más de 2 años de experiencia.",
-    en: "A React & React Native Developer based in Argentina, with +2 Years of Experience.",
+    es: "Soy un desarrollador de React y React Native con residencia en Argentina, con más de 3 años de experiencia.",
+    en: "A React & React Native Developer based in Argentina, with +3 Years of Experience.",
   },
   aboutDetail: {
     es: "Desarrollo código sólido y eficiente, colaboro en equipos ágiles para impulsar el éxito de los proyectos y siempre me esfuerzo por superar las expectativas. Mi compromiso con la calidad y la innovación me distingue en mi campo.",
