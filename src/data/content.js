@@ -110,12 +110,6 @@ export const content = {
             "Native Bluetooth printing via a Kotlin/Java Android module, camera-based QR/barcode scanning, maps and geolocation.",
             "End-to-end delivery: EAS Build, APK generation, Google Play releases, OTA updates and multi-environment config.",
           ],
-          links: [
-            { label: "Soy Starken", url: "https://play.google.com/store/apps/details?id=cl.starken.pudos" },
-            { label: "Starken · Play Store", url: "https://play.google.com/store/apps/details?id=cl.starken.movil" },
-            { label: "App Store", url: "https://apps.apple.com/us/app/starken/id1500423191" },
-          ],
-          linksLabel: "Live apps:",
         },
         {
           company: "PersonalPay",
@@ -183,11 +177,41 @@ export const content = {
       ],
     },
     projects: {
-      kicker: "Projects",
-      heading: "Personal & side projects",
-      intro: "Built on my own time. My professional banking, fintech and logistics work is under NDA — see the experience above.",
-      filters: { all: "All", web: "Web", mobile: "Mobile" },
+      kicker: "Work",
+      heading: "Products & projects",
+      intro:
+        "Products in production I've helped build — millions of users combined — plus other projects that are part of my journey.",
+      inProduction: "In production",
+      otherLabel: "Other projects",
+      downloads: "downloads",
+      storeLabel: "Google Play",
       liveLabel: "Live site",
+      enterprise: [
+        {
+          name: "Banco Galicia",
+          role: "Banking app · React & TypeScript",
+          image: "/images/work/galicia.jpg",
+          metric: "10M+",
+          tags: ["React", "TypeScript", "REST/BFF"],
+          url: "https://play.google.com/store/apps/details?id=com.mosync.app_Banco_Galicia",
+        },
+        {
+          name: "PersonalPay",
+          role: "Digital wallet · React Native",
+          image: "/images/work/personalpay.jpg",
+          metric: "10M+",
+          tags: ["React Native", "React", "Fintech"],
+          url: "https://play.google.com/store/apps/details?id=ar.com.personalpay",
+        },
+        {
+          name: "Starken",
+          role: "Logistics apps · React Native",
+          image: "/images/work/starken.jpg",
+          metric: "500K+",
+          tags: ["React Native", "Kotlin/Java", "EAS"],
+          url: "https://play.google.com/store/apps/details?id=cl.starken.movil",
+        },
+      ],
       items: [
         {
           name: "Florería La Rosa",
@@ -324,12 +348,6 @@ export const content = {
             "Impresión Bluetooth nativa mediante un módulo Android en Kotlin/Java, escaneo QR/barcode con cámara, mapas y geolocalización.",
             "Delivery de punta a punta: EAS Build, generación de APK, releases en Google Play, OTA updates y config multi-entorno.",
           ],
-          links: [
-            { label: "Soy Starken", url: "https://play.google.com/store/apps/details?id=cl.starken.pudos" },
-            { label: "Starken · Play Store", url: "https://play.google.com/store/apps/details?id=cl.starken.movil" },
-            { label: "App Store", url: "https://apps.apple.com/us/app/starken/id1500423191" },
-          ],
-          linksLabel: "Apps en producción:",
         },
         {
           company: "PersonalPay",
@@ -397,11 +415,41 @@ export const content = {
       ],
     },
     projects: {
-      kicker: "Proyectos",
-      heading: "Proyectos personales",
-      intro: "Hechos por mi cuenta. Mi trabajo profesional de banca, fintech y logística está bajo NDA — mirá la experiencia arriba.",
-      filters: { all: "Todos", web: "Web", mobile: "Mobile" },
+      kicker: "Trabajos",
+      heading: "Productos & proyectos",
+      intro:
+        "Productos en producción en los que trabajé — millones de usuarios en conjunto — y otros proyectos que forman parte de mi recorrido.",
+      inProduction: "En producción",
+      otherLabel: "Otros proyectos",
+      downloads: "descargas",
+      storeLabel: "Google Play",
       liveLabel: "Sitio en vivo",
+      enterprise: [
+        {
+          name: "Banco Galicia",
+          role: "App de banca · React & TypeScript",
+          image: "/images/work/galicia.jpg",
+          metric: "10M+",
+          tags: ["React", "TypeScript", "REST/BFF"],
+          url: "https://play.google.com/store/apps/details?id=com.mosync.app_Banco_Galicia",
+        },
+        {
+          name: "PersonalPay",
+          role: "Billetera virtual · React Native",
+          image: "/images/work/personalpay.jpg",
+          metric: "10M+",
+          tags: ["React Native", "React", "Fintech"],
+          url: "https://play.google.com/store/apps/details?id=ar.com.personalpay",
+        },
+        {
+          name: "Starken",
+          role: "Apps de logística · React Native",
+          image: "/images/work/starken.jpg",
+          metric: "500K+",
+          tags: ["React Native", "Kotlin/Java", "EAS"],
+          url: "https://play.google.com/store/apps/details?id=cl.starken.movil",
+        },
+      ],
       items: [
         {
           name: "Florería La Rosa",
