@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens (dark is the default) ---------- */
+@theme {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0b0f17;
+  --color-surface: #121826;
+  --color-surface2: #1a2233;
+  --color-border: #232d44;
+  --color-text: #e8edf6;
+  --color-muted: #93a0b5;
+  --color-faint: #64718a;
+  --color-accent: #f5b642;
+  --color-accent-strong: #f59e0b;
+  --color-accent-contrast: #1a1300;
+
+  --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
+    0 20px 40px -24px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- Light theme overrides ---------- */
+[data-theme="light"] {
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface2: #eef1f5;
+  --color-border: #e2e6ee;
+  --color-text: #0f1623;
+  --color-muted: #566173;
+  --color-faint: #8a94a5;
+  --color-accent: #c98a12;
+  --color-accent-strong: #a9730a;
+  --color-accent-contrast: #fffaf0;
+  --shadow-card: 0 1px 2px rgba(16, 22, 35, 0.04),
+    0 20px 40px -28px rgba(16, 22, 35, 0.25);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Utility: gradient text */
+.text-gradient {
+  background: linear-gradient(
+    120deg,
+    var(--color-text) 0%,
+    var(--color-text) 40%,
+    var(--color-accent) 120%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle grid/noise backdrop for hero */
+.bg-grid {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--color-muted) 22%, transparent) 1px,
+      transparent 0
+    );
+  background-size: 34px 34px;
+}
