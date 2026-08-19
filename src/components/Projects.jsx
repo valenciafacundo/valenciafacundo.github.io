@@ -51,12 +51,8 @@ export default function Projects() {
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {visible.map((proj, i) => (
-            <Reveal
-              key={proj.name}
-              delay={(i % 3) * 0.06}
-              className={proj.featured ? "sm:col-span-2 lg:col-span-2" : ""}
-            >
-              <ProjectCard proj={proj} liveLabel={p.liveLabel} featured={proj.featured} />
+            <Reveal key={proj.name} delay={(i % 3) * 0.06}>
+              <ProjectCard proj={proj} liveLabel={p.liveLabel} />
             </Reveal>
           ))}
         </div>
@@ -65,23 +61,27 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({ proj, liveLabel, featured }) {
+function ProjectCard({ proj, liveLabel }) {
   const Wrapper = proj.url ? "a" : "div";
   const wrapperProps = proj.url
     ? { href: proj.url, target: "_blank", rel: "noopener noreferrer" }
     : {};
+  const contain = proj.fit === "contain";
 
   return (
     <Wrapper
       {...wrapperProps}
       className="group block h-full overflow-hidden rounded-2xl border border-border bg-surface hover:border-accent/50 transition-colors shadow-[var(--shadow-card)]"
     >
-      <div className={"relative overflow-hidden " + (featured ? "aspect-[16/10]" : "aspect-[4/3]")}>
+      <div className={"relative overflow-hidden aspect-[4/3] " + (contain ? "bg-surface2" : "")}>
         <img
           src={proj.image}
           alt={proj.name}
           loading="lazy"
-          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
+          className={
+            "h-full w-full transition-transform duration-500 group-hover:scale-[1.04] " +
+            (contain ? "object-contain p-3" : "object-cover object-top")
+          }
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity" />
         {proj.url && (

@@ -14,6 +14,14 @@ export const PROFILE = {
   },
 };
 
+// Companies delivered for — logos used nominatively to show work history.
+export const COMPANIES = [
+  { name: "Banco Galicia", logo: "/images/logos/galicia.png", note: "Banking" },
+  { name: "Starken", logo: "/images/logos/starken.png", note: "Logistics" },
+  { name: "PersonalPay", logo: "/images/logos/personalpay.svg", note: "Fintech" },
+  { name: "Baufest", logo: "/images/logos/baufest.png", note: "Consulting", wide: true },
+];
+
 // Core tech shown as a logo row (icons live in /public/images).
 export const CORE_STACK = [
   { label: "React", icon: "/images/react-svg-blue.svg" },
@@ -72,9 +80,11 @@ export const content = {
       heading: "Where I've delivered",
       intro:
         "Currently at Baufest (consulting firm) with continuous employment across client assignments — delivering in digital banking, fintech and logistics.",
+      companiesLabel: "Companies I've delivered for",
       jobs: [
         {
           company: "Banco Galicia",
+          logo: "/images/logos/galicia.png",
           via: "via Baufest",
           role: "React & TypeScript Developer — Banking",
           period: "Jan 2024 – Present",
@@ -89,6 +99,7 @@ export const content = {
         },
         {
           company: "Starken",
+          logo: "/images/logos/starken.png",
           role: "React Native Developer — Logistics",
           period: "2024 – Present",
           location: "Remote",
@@ -108,6 +119,7 @@ export const content = {
         },
         {
           company: "PersonalPay",
+          logo: "/images/logos/personalpay.svg",
           via: "via Baufest",
           role: "React Native & React Developer — Fintech",
           period: "Dec 2022 – 2023",
@@ -172,15 +184,14 @@ export const content = {
     },
     projects: {
       kicker: "Projects",
-      heading: "Selected work",
-      intro: "A few things I've built. Professional banking/fintech work stays under NDA — described above.",
+      heading: "Personal & side projects",
+      intro: "Built on my own time. My professional banking, fintech and logistics work is under NDA — see the experience above.",
       filters: { all: "All", web: "Web", mobile: "Mobile" },
       liveLabel: "Live site",
       items: [
         {
           name: "Florería La Rosa",
           type: "web",
-          featured: true,
           url: "https://floreria-la-rosa.netlify.app",
           image: "/images/floreria-la-rosa.png",
           desc: "Commercial website built with Next.js (App Router, React Server Components), Tailwind CSS, shadcn/ui and Radix. Responsive, SEO/SSG, OpenGraph. Contributed to the business's online presence and to international inquiries and sales.",
@@ -189,6 +200,7 @@ export const content = {
         {
           name: "FLOBI",
           type: "mobile",
+          fit: "contain",
           image: "/images/flobi-porcentaje2.png",
           desc: "Tennis & padel social network to find players of a similar level. Custom real-time chat, deep linking, Firebase, AWS S3 and MongoDB.",
           stack: ["React Native", "Expo", "Firebase"],
@@ -282,9 +294,11 @@ export const content = {
       heading: "Dónde entregué valor",
       intro:
         "Actualmente en Baufest (consultora) con empleo continuo en distintas asignaciones de cliente — entregando en banca digital, fintech y logística.",
+      companiesLabel: "Empresas para las que entregué",
       jobs: [
         {
           company: "Banco Galicia",
+          logo: "/images/logos/galicia.png",
           via: "vía Baufest",
           role: "Desarrollador React & TypeScript — Banca",
           period: "Ene 2024 – Presente",
@@ -299,6 +313,7 @@ export const content = {
         },
         {
           company: "Starken",
+          logo: "/images/logos/starken.png",
           role: "Desarrollador React Native — Logística",
           period: "2024 – Presente",
           location: "Remoto",
@@ -318,6 +333,7 @@ export const content = {
         },
         {
           company: "PersonalPay",
+          logo: "/images/logos/personalpay.svg",
           via: "vía Baufest",
           role: "Desarrollador React Native & React — Fintech",
           period: "Dic 2022 – 2023",
@@ -382,15 +398,14 @@ export const content = {
     },
     projects: {
       kicker: "Proyectos",
-      heading: "Trabajo seleccionado",
-      intro: "Algunas cosas que construí. El trabajo profesional de banca/fintech queda bajo NDA — descrito arriba.",
+      heading: "Proyectos personales",
+      intro: "Hechos por mi cuenta. Mi trabajo profesional de banca, fintech y logística está bajo NDA — mirá la experiencia arriba.",
       filters: { all: "Todos", web: "Web", mobile: "Mobile" },
       liveLabel: "Sitio en vivo",
       items: [
         {
           name: "Florería La Rosa",
           type: "web",
-          featured: true,
           url: "https://floreria-la-rosa.netlify.app",
           image: "/images/floreria-la-rosa.png",
           desc: "Sitio comercial construido con Next.js (App Router, React Server Components), Tailwind CSS, shadcn/ui y Radix. Responsive, SEO/SSG, OpenGraph. Contribuyó a la presencia online del negocio y a consultas y ventas internacionales.",
@@ -399,6 +414,7 @@ export const content = {
         {
           name: "FLOBI",
           type: "mobile",
+          fit: "contain",
           image: "/images/flobi-porcentaje2.png",
           desc: "Red social de tenis y pádel para encontrar jugadores de nivel similar. Chat en tiempo real, deep linking, Firebase, AWS S3 y MongoDB.",
           stack: ["React Native", "Expo", "Firebase"],

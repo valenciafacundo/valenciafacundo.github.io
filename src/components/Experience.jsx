@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "./ui/SectionHeading.jsx";
 import Reveal from "./ui/Reveal.jsx";
 import { useLang } from "../context/LanguageContext.jsx";
+import { COMPANIES } from "../data/content.js";
 
 export default function Experience() {
   const { t, lang } = useLang();
@@ -15,6 +16,31 @@ export default function Experience() {
           <p className="mt-5 max-w-3xl text-muted leading-relaxed">{e.intro}</p>
         </Reveal>
 
+        {/* Companies strip — nominative logos to convey the scale of the work */}
+        <Reveal>
+          <div className="mt-8">
+            <p className="text-[11px] uppercase tracking-[0.16em] text-faint mb-3">
+              {e.companiesLabel}
+            </p>
+            <div className="flex flex-wrap gap-2.5">
+              {COMPANIES.map((c) => (
+                <div
+                  key={c.name}
+                  className="flex items-center gap-2.5 rounded-xl border border-border bg-surface px-3 py-2"
+                >
+                  <span className="grid place-items-center h-9 w-9 rounded-lg bg-white shrink-0">
+                    <img src={c.logo} alt={c.name} className="max-h-6 max-w-[26px] object-contain" />
+                  </span>
+                  <div className="pr-1">
+                    <div className="text-sm font-semibold text-text leading-none">{c.name}</div>
+                    <div className="text-[11px] text-faint mt-0.5">{c.note}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
         <ol className="mt-12 relative border-l border-border/80 ml-1.5 space-y-8">
           {e.jobs.map((job, i) => (
             <li key={job.company + i} className="relative pl-7 sm:pl-9">
@@ -22,6 +48,11 @@ export default function Experience() {
               <Reveal delay={i * 0.05}>
                 <article className="rounded-2xl border border-border bg-surface p-5 sm:p-6 shadow-[var(--shadow-card)]">
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    {job.logo && (
+                      <span className="grid place-items-center h-9 w-9 rounded-lg bg-white border border-border shrink-0 mr-1">
+                        <img src={job.logo} alt="" className="max-h-6 max-w-[26px] object-contain" />
+                      </span>
+                    )}
                     <h3 className="font-display text-lg font-bold text-text">{job.company}</h3>
                     {job.via && <span className="text-accent text-sm font-medium">· {job.via}</span>}
                     {job.current && (
