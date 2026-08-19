@@ -126,6 +126,7 @@ export const content = {
         },
         {
           company: "FLOBI",
+          logo: "/images/logos/flobi.png",
           role: "React Native & React Developer — Sports Social App",
           period: "2022 – 2023",
           location: "",
@@ -364,6 +365,7 @@ export const content = {
         },
         {
           company: "FLOBI",
+          logo: "/images/logos/flobi.png",
           role: "Desarrollador React Native & React — App Social Deportiva",
           period: "2022 – 2023",
           location: "",
