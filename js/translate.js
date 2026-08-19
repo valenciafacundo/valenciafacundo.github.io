@@ -119,6 +119,10 @@ var textos = {
     es: "Desarrollador React Native — Logística",
     en: "React Native Developer — Logistics",
   },
+  starkenAppsLabel: {
+    es: "Apps en producción:",
+    en: "Live apps:",
+  },
   starkenDetail: {
     es: "Funcionalidades mobile en 3–4 apps de producción de un ecosistema logístico. Ayudo a definir y documentar las convenciones técnicas del equipo; RTK Query + Redux Toolkit y un Kit UI compartido desde Figma. Impresión Bluetooth nativa (Kotlin/Java), escaneo QR/barcode, mapas. Delivery de punta a punta: EAS Build, Play Store, OTA.",
     en: "Mobile features across 3–4 production apps in a logistics ecosystem. Help define and document the team's technical conventions; RTK Query + Redux Toolkit and a shared UI kit from Figma. Native Bluetooth printing (Kotlin/Java), QR/barcode scanning, maps. End-to-end delivery: EAS Build, Play Store, OTA.",
